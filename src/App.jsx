@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  profile, stats, ticker, services, process, projects,
+  profile, highlights, stats, ticker, services, process, buildTypes, projects,
   experience, education, certifications, logLines,
 } from './data.js';
 
@@ -83,8 +83,14 @@ function Hero() {
           <span className="badge"><i /> Open to work · Dubai, On-site / Hybrid</span>
           <h1>{profile.headline}</h1>
           <p className="lead">{profile.intro}</p>
+          <ul className="highlights">
+            {highlights.map(([k, v]) => (
+              <li key={k}><b>{k}:</b> {v}</li>
+            ))}
+          </ul>
           <div className="cta">
             <a className="btn" href="#projects">View Projects</a>
+            <a className="btn btn-ghost" href="/Abi-Sarasan-CV.pdf" download>Download CV</a>
             <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           <div className="stats">
@@ -105,7 +111,7 @@ function Hero() {
 function ProfileCard() {
   return (
     <aside className="card profile-card">
-      <div className="avatar">AS</div>
+      <img className="avatar" src="/abi.jpg" alt="Abi Sarasan" width="132" height="132" />
       <h3>{profile.name}</h3>
       <p className="muted">{profile.role}</p>
       <p className="muted small">{profile.location}</p>
@@ -190,6 +196,17 @@ function Process() {
                 <span className="step-n">{p.n}</span>
                 <h3>{p.title}</h3>
                 <p>{p.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal><h3 className="sub-head">What I build</h3></Reveal>
+        <div className="grid g4">
+          {buildTypes.map((b) => (
+            <Reveal key={b.title}>
+              <div className="card hover">
+                <h3>{b.title}</h3>
+                <p>{b.text}</p>
               </div>
             </Reveal>
           ))}
@@ -282,6 +299,7 @@ function Contact() {
           <p className="lead-sm">Open to Senior IT and infrastructure roles in Dubai, on-site or hybrid.</p>
           <div className="cta center">
             <a className="btn" href={`mailto:${profile.email}`}>Email me</a>
+            <a className="btn btn-ghost" href="/Abi-Sarasan-CV.pdf" download>Download CV</a>
             <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </Reveal>

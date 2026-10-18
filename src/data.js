@@ -14,6 +14,14 @@ export const profile = {
   ],
 };
 
+export const highlights = [
+  ['Enterprise vision', 'aligning IT infrastructure, security and support with business goals'],
+  ['Hybrid identity and endpoint', 'Entra ID, Intune, Conditional Access, Autopilot'],
+  ['Generative AI and Claude workloads', 'running AI workloads and driving organisation-wide AI adoption for up to 10x faster work'],
+  ['Automation', 'n8n and Claude workflows for ticket triage, onboarding and self-service'],
+  ['360° coverage', 'identity, endpoints, cloud, network security, backup and ITSM'],
+];
+
 export const stats = [
   { value: 12, suffix: '+', label: 'Years in enterprise IT' },
   { value: 3, suffix: '', label: 'Countries: UAE, KSA, Singapore' },
@@ -40,6 +48,13 @@ export const process = [
   { n: '1', title: 'Assess', text: 'Map the current environment, risks and the manual work that slows teams down.' },
   { n: '2', title: 'Design & Build', text: 'Architect secure, cost-effective solutions and automate with PowerShell, Intune policies and n8n.' },
   { n: '3', title: 'Operate & Improve', text: 'Monitor against SLAs, document for audit readiness and keep tuning for resilience.' },
+];
+
+export const buildTypes = [
+  { title: 'AI Automation', text: 'AI workflows with n8n and Claude that read, classify and act on emails, tickets and documents.' },
+  { title: 'Voice Agent', text: 'Voice AI agents that answer calls, handle common requests and hand over to a person when needed.' },
+  { title: 'Work Automation', text: 'Custom workflows that remove repetitive tasks: approvals, reporting, onboarding and notifications.' },
+  { title: 'Gym Management Software', text: 'Member management, attendance, memberships and payment tracking in one simple system.' },
 ];
 
 export const projects = [
