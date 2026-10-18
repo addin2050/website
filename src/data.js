@@ -114,12 +114,6 @@ export const projects = [
     tools: ['Infrastructure', 'End-user devices', 'KSA'],
   },
   {
-    title: 'Multi-Branch Gym Management System',
-    tag: '6 branches · In development',
-    text: 'Gym management and reporting software for a six-branch gym: members and memberships, check-in, classes, payments and expenses, with owner, manager and reception roles and per-branch dashboards.',
-    tools: ['React', 'Node.js', 'SQLite'],
-  },
-  {
     title: 'VMware Horizon VDI Delivery',
     tag: 'VMware PSO, ASEAN',
     text: 'Design, installation and configuration of Horizon View deployments (up to 100 desktops), including a Singapore petroleum client engagement.',
