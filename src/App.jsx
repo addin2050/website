@@ -247,7 +247,7 @@ function Process() {
           ))}
         </div>
         <Reveal><h3 className="sub-head">What I build</h3></Reveal>
-        <div className="grid g4">
+        <div className="grid g3">
           {buildTypes.map((b) => (
             <Reveal key={b.title}>
               <div className="card hover">

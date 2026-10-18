@@ -66,7 +66,6 @@ export const buildTypes = [
   { title: 'AI Automation', text: 'AI workflows with n8n and Claude that read, classify and act on emails, tickets and documents.' },
   { title: 'Voice Agent', text: 'Voice AI agents that answer calls, handle common requests and hand over to a person when needed.' },
   { title: 'Work Automation', text: 'Custom workflows that remove repetitive tasks: approvals, reporting, onboarding and notifications.' },
-  { title: 'Gym Management Software', text: 'Member management, attendance, memberships and payment tracking in one simple system.' },
 ];
 
 export const philosophy = {
