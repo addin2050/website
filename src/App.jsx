@@ -142,7 +142,7 @@ function Hero() {
 function ProfileCard() {
   return (
     <aside className="card profile-card">
-      <span className="float tl"><b>▸</b>Make AI work and deliver what you want</span>
+      <span className="float tl"><b>▸</b>Make AI work and deliver what your organisation wishes for</span>
       <span className="float br"><b>✓</b>12+ yrs enterprise IT</span>
       <img className="avatar" src="/abi.jpg" alt="Abi Sarasan" width="132" height="132" />
       <h3>{profile.name}</h3>
