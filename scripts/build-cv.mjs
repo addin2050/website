@@ -1,10 +1,12 @@
 // Builds public/Abi-Sarasan-CV.pdf from src/data.js using headless Chrome/Edge.
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { profile, experience, education, certifications, ticker, projects } from '../src/data.js';
+import { profile, highlights, certSkills, philosophy, experience, education, certifications, ticker, projects } from '../src/data.js';
+
+const photo = 'data:image/jpeg;base64,' + readFileSync('public/abi.jpg').toString('base64');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -23,20 +25,32 @@ h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.08em; color: 
 ul { margin: 3px 0 0; padding-left: 16px; }
 li { margin-bottom: 1px; }
 p { margin: 0 0 5px; }
+.head { display: flex; gap: 14px; align-items: center; margin-bottom: 4px; }
+.head img { width: 26mm; height: 30mm; object-fit: cover; object-position: center 15%; border-radius: 6px; }
+.head > div { flex: 1; }
+.contact { border-bottom: 2px solid #0f9d8a; }
+blockquote { margin: 4px 0 0; padding-left: 8px; border-left: 3px solid #ff4d14; font-style: italic; }
+.tags span { display: inline-block; font-size: 8.5pt; border: 1px solid #cfe9e4; background: #eefaf7; border-radius: 4px; padding: 0 5px; margin: 0 3px 3px 0; }
+.certs { columns: 2; column-gap: 18px; font-size: 8.8pt; padding-left: 14px; }
+.certs li { break-inside: avoid; margin-bottom: 3px; }
 </style></head><body>
-<h1>${esc(profile.name)}</h1>
-<div class="role">${esc(profile.role)}</div>
-<div class="contact">${esc(profile.location)} · ${esc(profile.email)} · ${esc(profile.linkedin.replace('https://www.', ''))}</div>
+<div class="head"><img src="${photo}" alt=""><div><h1>${esc(profile.name)}</h1>
+<div class="role">${esc(profile.role)} · 12+ years GCC experience</div>
+<div class="contact">${esc(profile.location)} · ${esc(profile.phone)} · ${esc(profile.email)} · ${esc(profile.linkedin.replace('https://www.', ''))}</div></div></div>
 <h2>Profile</h2>${profile.about.map((p) => `<p>${esc(p)}</p>`).join('')}
+<h2>Key Strengths</h2><ul>${highlights.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul>
+<h2>Philosophy</h2><blockquote>${esc(philosophy.quote)}</blockquote>
+<p style="margin-top:4px">${esc(philosophy.intro)}</p>
 <h2>Core Skills</h2><p>${ticker.map(esc).join(' · ')}</p>
+<h2>Certified Skills</h2>${certSkills.map((g) => `<p><b>${esc(g.area)}:</b> ${g.skills.map(esc).join(' · ')}</p>`).join('')}
 <h2>Experience</h2>
 ${experience.map((e) => `<div class="job"><div class="job-h"><span>${esc(e.role)}</span><span>${esc(e.period)}</span></div>
 <div><span class="co">${esc(e.company)}</span> · ${esc(e.place)}</div>
 <ul>${e.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>`).join('')}
 <h2>Featured Projects</h2>
 <ul>${projects.map((p) => `<li><b>${esc(p.title)}</b> (${esc(p.tag)}): ${esc(p.text)}</li>`).join('')}</ul>
-<h2>Education</h2>${education.map((e) => `<p><b>${esc(e.school)}</b>${e.detail.startsWith('Add ') ? '' : ' · ' + esc(e.detail)}</p>`).join('')}
-<h2>Certifications</h2><p>${certifications.map(esc).join(' · ')}</p>
+<h2>Education</h2>${education.map((e) => `<p><b>${esc(e.degree)}</b><br>${esc(e.school)} · ${esc(e.years)}</p>`).join('')}
+<h2>Certifications</h2><ul class="certs">${certifications.map((c) => `<li><b>${esc(c.name)}</b>, ${esc(c.issuer)} (${esc(c.date)})</li>`).join('')}</ul>
 </body></html>`;
 
 const dir = join(tmpdir(), 'cv-build');
