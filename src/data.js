@@ -17,7 +17,7 @@ export const profile = {
 export const highlights = [
   ['Enterprise vision', 'aligning IT infrastructure, security and support with business goals'],
   ['Hybrid identity and endpoint', 'Entra ID, Intune, Conditional Access, Autopilot'],
-  ['Generative AI and Claude workloads', 'running AI workloads and driving organisation-wide AI adoption for up to 10x faster work'],
+  ['Generative AI and Claude workloads', 'running AI workloads and driving organisation-wide AI adoption for up to 20x faster work'],
   ['Automation', 'n8n and Claude workflows for ticket triage, onboarding and self-service'],
   ['360° coverage', 'identity, endpoints, cloud, network security, backup and ITSM'],
 ];
@@ -98,6 +98,9 @@ export const experience = [
     period: 'Oct 2022 – Mar 2024',
     place: 'UAE, India, Canada · On-site',
     points: [
+      'First technical hire: built the entire technical infrastructure from the ground up.',
+      'Recruited and interviewed the IT team, then trained them into next-era IT engineers.',
+      'Scaled IT to support company growth to ₹100 crore and expansion into new geographies (UAE, India, Canada).',
       'Delivered end-to-end cybersecurity operations and IT infrastructure security.',
       'Ran vulnerability assessments on websites and digital assets for proactive remediation.',
       'Automated security administration, reporting and threat hunting with PowerShell.',

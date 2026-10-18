@@ -80,7 +80,7 @@ function Hero() {
     <section id="home" className="hero">
       <div className="container hero-grid">
         <div>
-          <span className="badge"><i /> Open to work · Dubai, On-site / Hybrid</span>
+          <span className="badge"><i /> Senior IT Administrator · Open to work</span>
           <h1>{profile.headline}</h1>
           <p className="lead">{profile.intro}</p>
           <ul className="highlights">
@@ -111,6 +111,8 @@ function Hero() {
 function ProfileCard() {
   return (
     <aside className="card profile-card">
+      <span className="float tl"><b>▸</b>Making all work and delivering results</span>
+      <span className="float br"><b>✓</b>12+ yrs enterprise IT</span>
       <img className="avatar" src="/abi.jpg" alt="Abi Sarasan" width="132" height="132" />
       <h3>{profile.name}</h3>
       <p className="muted">{profile.role}</p>
@@ -323,6 +325,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <div className="status-pill"><i /> 12+ years across UAE, KSA and Singapore</div>
       <main>
         <Hero />
         <Terminal />
