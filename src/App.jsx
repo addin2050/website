@@ -490,7 +490,7 @@ function Footer() {
         <img src="/call-qr.svg" alt={`QR code that calls ${profile.phone}`} width="140" height="140" />
         <div>
           <h3>Scan to call me</h3>
-          <p className="muted small">Point your phone camera at the code to dial {profile.phone}.</p>
+          <p className="muted small">Point your phone camera at the code to call, copy or save {profile.phone}.</p>
         </div>
       </div>
       <div className="container footer-in">

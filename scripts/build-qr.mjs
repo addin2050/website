@@ -7,6 +7,15 @@ const make = (text) => QRCode.toString(text, {
   type: 'svg', margin: 2, errorCorrectionLevel: 'M',
   color: { dark: '#0b0d0c', light: '#ffffff' },
 });
-writeFileSync('public/call-qr.svg', await make(`tel:${profile.phoneLink}`));
+// vCard so the scanner offers Call, Copy and Save contact for the number.
+const vcard = [
+  'BEGIN:VCARD', 'VERSION:3.0',
+  `FN:${profile.name}`, 'N:Sarasan;Abi;;;',
+  `TITLE:${profile.role}`,
+  `TEL;TYPE=CELL,VOICE:${profile.phoneLink}`,
+  `EMAIL:${profile.email}`,
+  'END:VCARD',
+].join('\n');
+writeFileSync('public/call-qr.svg', await make(vcard));
 writeFileSync('public/whatsapp-qr.svg', await make(profile.whatsapp));
 console.log('Wrote call-qr.svg and whatsapp-qr.svg for', profile.phoneLink);
