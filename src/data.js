@@ -69,7 +69,7 @@ export const buildTypes = [
 ];
 
 export const philosophy = {
-  quote: 'AI is not replacing IT professionals. It is replacing the ones who refuse to adapt.',
+  quote: 'AI is not replacing IT professionals. It is making them 20X more capable and ready for a new beginning.',
   intro:
     'I am an advocate of AI and automation in IT. From my years in enterprise IT, I believe the biggest gains come from letting automation handle the repeatable work and AI handle the reading, sorting and drafting, while people keep control of the decisions.',
   principles: [
