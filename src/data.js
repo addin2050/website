@@ -10,7 +10,7 @@ export const profile = {
   whatsapp: 'https://wa.me/971502383285?text=Hi%20Abi%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk.',
   headline: 'Modern IT operations, secured and automated.',
   intro:
-    'Senior IT Administrator with 12+ years of enterprise experience across the UAE, KSA and Singapore. I run hybrid Entra ID and Intune environments, and I am building AI-driven automation with n8n and Claude to make IT support faster and safer.',
+    'Senior IT Administrator with enterprise experience across the UAE, KSA and Singapore. I run hybrid Entra ID and Intune environments, and I am building AI-driven automation with n8n and Claude to make IT support faster and safer.',
   about: [
     'My core expertise spans Windows Server, Active Directory, Microsoft 365 and Exchange hybrid environments, Azure, and modern device management with Intune, backed by hands-on work in hybrid Entra ID architectures.',
     'I am expanding into AI-driven automation, using n8n and Claude to streamline IT workflows, reduce manual overhead, and build smarter helpdesk and support systems. Combining traditional infrastructure strength with automation and AI is where I see enterprise IT heading.',
@@ -71,7 +71,7 @@ export const buildTypes = [
 export const philosophy = {
   quote: 'AI is not replacing IT professionals. It is replacing the ones who refuse to adapt.',
   intro:
-    'I am an advocate of AI and automation in IT. After 12+ years in enterprise IT, I believe the biggest gains come from letting automation handle the repeatable work and AI handle the reading, sorting and drafting, while people keep control of the decisions.',
+    'I am an advocate of AI and automation in IT. From my years in enterprise IT, I believe the biggest gains come from letting automation handle the repeatable work and AI handle the reading, sorting and drafting, while people keep control of the decisions.',
   principles: [
     { title: 'Automate the repeatable', text: 'If a task happens twice a week, it should be a script, a policy or a workflow.' },
     { title: 'AI in the loop, humans in control', text: 'Claude and n8n triage, classify and draft. People approve what matters.' },

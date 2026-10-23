@@ -35,7 +35,7 @@ blockquote { margin: 4px 0 0; padding-left: 8px; border-left: 3px solid #ff4d14;
 .certs li { break-inside: avoid; margin-bottom: 3px; }
 </style></head><body>
 <div class="head"><img src="${photo}" alt=""><div><h1>${esc(profile.name)}</h1>
-<div class="role">${esc(profile.role)} · 12+ years GCC experience</div>
+<div class="role">${esc(profile.role)}</div>
 <div class="contact">${esc(profile.location)} · ${esc(profile.phone)} · ${esc(profile.email)} · ${esc(profile.linkedin.replace('https://www.', ''))}</div></div></div>
 <h2>Profile</h2>${profile.about.map((p) => `<p>${esc(p)}</p>`).join('')}
 <h2>Key Strengths</h2><ul>${highlights.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}</ul>
