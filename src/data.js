@@ -26,7 +26,7 @@ export const highlights = [
 ];
 
 export const stats = [
-  { value: 12, suffix: '+', label: 'Years of GCC experience' },
+  { value: 15, suffix: '+', label: 'Years of GCC experience' },
   { value: 3, suffix: '', label: 'Countries: UAE, KSA, Singapore' },
   { value: 5, suffix: '', label: 'Organisations served' },
   { value: 4, suffix: 'X', label: 'Efficiency goal with automation' },

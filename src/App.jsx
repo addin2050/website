@@ -505,7 +505,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <div className="status-pill"><i /> Across UAE, KSA and Singapore</div>
+      <div className="status-pill"><i /> AI Builder with 15+ years across UAE, KSA and Singapore</div>
       <main>
         <Hero />
         <Terminal />
